@@ -1,0 +1,98 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		x:CompileBindings="False"
+        x:Class="demo_bicycle.CatalogWindow"
+        Title="Каталог"
+		Icon="Icon/icon.png">
+	
+	<DockPanel>
+
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="5">
+			<Image Source="Icon/icon.ico" Height="50" Width="50" Margin="5"/>
+			<TextBox Name="SearchBox"  Watermark="Поиск..." KeyUp="SearchBox_KeyUp"  Margin="5"/>
+			<ComboBox Name="SortQuantity" SelectionChanged="SortQuantity_SelectionChanged" PlaceholderText="По количеству" Margin="5">
+				<ComboBoxItem>по возрастанию</ComboBoxItem>
+				<ComboBoxItem>по убыванию</ComboBoxItem>
+			</ComboBox>
+
+			<ComboBox Name="SortCost" SelectionChanged="SortCost_SelectionChanged" PlaceholderText="По цене" Margin="5">
+				<ComboBoxItem>по возрастанию</ComboBoxItem>
+				<ComboBoxItem>по убыванию</ComboBoxItem>
+			</ComboBox>
+
+			<ComboBox Name="SortDiscount" SelectionChanged="SortDiscount_SelectionChanged" PlaceholderText="По скидке" Margin="5">
+				<ComboBoxItem>по возрастанию</ComboBoxItem>
+				<ComboBoxItem>по убыванию</ComboBoxItem>
+			</ComboBox>
+
+			<ComboBox Name="Filter" SelectionChanged="Filter_SelectionChanged" PlaceholderText="По диапазону" Margin="5">
+				<ComboBoxItem>Все диапазоны</ComboBoxItem>
+				<ComboBoxItem>0-11,99%</ComboBoxItem>
+				<ComboBoxItem>12-18,99%</ComboBoxItem>
+				<ComboBoxItem>19% и более</ComboBoxItem>
+			</ComboBox>
+
+			<TextBlock Name="FioTextBlock" Text="" Margin="5"/>
+			
+			
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom" Margin="5">
+			<Button Content="Добавить товар" Name="AddBut" Click="AddBut_Click" IsVisible="False" Margin="5"/>
+			<Button Content="Назад" Name="Back" Click="Back_Click" Margin="5"/>
+		</StackPanel>
+
+
+
+
+		<ListBox Name="TovarsBox" SelectionChanged="TovarsBox_SelectionChanged">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Black" BorderThickness="1" Background="{Binding ColourDiscount}">
+						<DockPanel>
+							<Border BorderBrush="Black" BorderThickness="1"  DockPanel.Dock="Left">
+								<StackPanel Orientation="Vertical" VerticalAlignment="Center">
+									<Image Source="{Binding GetPhoto}" Height="100" Width="100" Margin="5"/>
+								</StackPanel>
+							</Border>
+
+
+							<Border BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Right">
+								<StackPanel Orientation="Vertical" VerticalAlignment="Center">
+									<TextBlock Text="{Binding Discount}" Margin="5"/>
+								</StackPanel>
+							</Border>
+							
+
+							<Border BorderBrush="Black" BorderThickness="1" Margin="5">
+								<StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+									
+									<StackPanel Orientation="Horizontal">
+										<TextBlock Text="{Binding Category.CategoryName}" Margin="5"/>
+										<TextBlock Text="|" Margin="5"/>
+										<TextBlock Text="{Binding Title}" Margin="5"/>
+									</StackPanel>
+
+									<TextBlock Text="{Binding Description, StringFormat='Описаниe:{0}'}" Margin="5"/>
+									<TextBlock Text="{Binding Manufacturer.ManufacturerName, StringFormat='Производитель:{0}'}" Margin="5"/>
+									<TextBlock Text="{Binding Supplier.SupplierName, StringFormat='Поставщик:{0}'}" Margin="5"/>
+									<TextBlock Text="{Binding Cost, StringFormat='Цена:{0}'}" TextDecorations="Strikethrough" Foreground="Red" Margin="5"/>
+									<TextBlock Text="{Binding Total, StringFormat='Цена со скидкой:{0}'}" Margin="5"/>
+									<TextBlock Text="{Binding Unit, StringFormat='Ед.Измерения:{0}'}" Margin="5"/>
+									<TextBlock Text="{Binding Quantity, StringFormat='Количество:{0}'}" Background="{Binding ColourQuantity}" Margin="5"/>
+
+								</StackPanel>
+							</Border>
+						</DockPanel>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		
+	</DockPanel>
+	
+
+</Window>

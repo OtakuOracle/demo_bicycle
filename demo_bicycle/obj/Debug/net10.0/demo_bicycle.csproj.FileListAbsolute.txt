@@ -185,3 +185,4 @@ C:\Users\Admin\Desktop\demo_bicycle\demo_bicycle\bin\Debug\net10.0\ru\Microsoft.
 C:\Users\Admin\Desktop\demo_bicycle\demo_bicycle\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Admin\Desktop\demo_bicycle\demo_bicycle\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Admin\Desktop\demo_bicycle\demo_bicycle\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Admin\Desktop\demo_bicycle\demo_bicycle\obj\Debug\net10.0\demo_bicycle.sourcelink.json

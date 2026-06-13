@@ -14,13 +14,13 @@ public partial class Tovar
 
     public string Unit { get; set; } = null!;
 
-    public int Cost { get; set; }
+    public int? Cost { get; set; }
     public decimal Total
     {
         get
         {
             var a = Cost / 100;
-            var b = a * Discount;
+            var b = Discount * a;
             var c = Cost - b;
             return (decimal)c;
         }
@@ -32,33 +32,34 @@ public partial class Tovar
 
     public int CategoryId { get; set; }
 
-    public int Discount { get; set; }
+    public int? Discount { get; set; }
+
     public string ColourDiscount
-    {
+    { 
         get
         {
-            if (Discount > 15)
+            if(Discount > 15)
             {
                 return "#483D8B";
             }
-            else
+            else 
             {
                 return "";
             }
         }
     }
 
+    public int? Quantity { get; set; }
 
-    public int Quantity { get; set; }
     public string ColourQuantity
     {
         get
         {
-            if (Discount == 0)
+            if(Quantity == 0)
             {
                 return "Gray";
             }
-            else
+            else 
             {
                 return "";
             }
@@ -68,19 +69,20 @@ public partial class Tovar
     public string Description { get; set; } = null!;
 
     public string? Photo { get; set; }
+
     public Bitmap GetPhoto
     {
         get
         {
-            if (Photo != null && Photo != "")
+            if(Photo != null && Photo != "")
             {
                 return new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "/" + Photo);
             }
             else
             {
                 return new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "/images/not.png");
-            }
 
+            }
         }
     }
 
