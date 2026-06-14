@@ -37,8 +37,8 @@ public partial class CatalogWindow : Window
     {
         switch(roleId)
         {
-            case 1: Filter.IsVisible = true; SortCost.IsVisible = true; SortQuantity.IsVisible = true; SortDiscount.IsVisible = true; AddBut.IsVisible = true; break;
-            case 2: Filter.IsVisible = true; SortCost.IsVisible = true; SortQuantity.IsVisible = true; SortDiscount.IsVisible = true; break;
+            case 1: Filter.IsVisible = true; SortCost.IsVisible = true; SortQuantity.IsVisible = true; SortDiscount.IsVisible = true; AddBut.IsVisible = true; OrderBut.IsVisible = true; break;
+            case 2: Filter.IsVisible = true; SortCost.IsVisible = true; SortQuantity.IsVisible = true; SortDiscount.IsVisible = true; OrderBut.IsVisible = true; break;
      
         }
     }
@@ -166,6 +166,13 @@ public partial class CatalogWindow : Window
 
     }
 
+    private async void OrderBut_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        OrderWindow orderWindow = new OrderWindow();
+        orderWindow.Show();
+        this.Close();
+
+    }
 
     private async void Back_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {

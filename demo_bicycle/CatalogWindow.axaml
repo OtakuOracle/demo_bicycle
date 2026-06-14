@@ -12,23 +12,23 @@
 
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="5">
 			<Image Source="Icon/icon.ico" Height="50" Width="50" Margin="5"/>
-			<TextBox Name="SearchBox"  Watermark="Поиск..." KeyUp="SearchBox_KeyUp"  Margin="5"/>
-			<ComboBox Name="SortQuantity" SelectionChanged="SortQuantity_SelectionChanged" PlaceholderText="По количеству" Margin="5">
+			<TextBox Name="SearchBox"  Watermark="Поиск..." KeyUp="SearchBox_KeyUp" IsVisible="False"  Margin="5"/>
+			<ComboBox Name="SortQuantity" SelectionChanged="SortQuantity_SelectionChanged" PlaceholderText="По количеству" IsVisible="False" Margin="5">
 				<ComboBoxItem>по возрастанию</ComboBoxItem>
 				<ComboBoxItem>по убыванию</ComboBoxItem>
 			</ComboBox>
 
-			<ComboBox Name="SortCost" SelectionChanged="SortCost_SelectionChanged" PlaceholderText="По цене" Margin="5">
+			<ComboBox Name="SortCost" SelectionChanged="SortCost_SelectionChanged" IsVisible="False" PlaceholderText="По цене" Margin="5">
 				<ComboBoxItem>по возрастанию</ComboBoxItem>
 				<ComboBoxItem>по убыванию</ComboBoxItem>
 			</ComboBox>
 
-			<ComboBox Name="SortDiscount" SelectionChanged="SortDiscount_SelectionChanged" PlaceholderText="По скидке" Margin="5">
+			<ComboBox Name="SortDiscount" SelectionChanged="SortDiscount_SelectionChanged" IsVisible="False" PlaceholderText="По скидке" Margin="5">
 				<ComboBoxItem>по возрастанию</ComboBoxItem>
 				<ComboBoxItem>по убыванию</ComboBoxItem>
 			</ComboBox>
 
-			<ComboBox Name="Filter" SelectionChanged="Filter_SelectionChanged" PlaceholderText="По диапазону" Margin="5">
+			<ComboBox Name="Filter" SelectionChanged="Filter_SelectionChanged" IsVisible="False" PlaceholderText="По диапазону" Margin="5">
 				<ComboBoxItem>Все диапазоны</ComboBoxItem>
 				<ComboBoxItem>0-11,99%</ComboBoxItem>
 				<ComboBoxItem>12-18,99%</ComboBoxItem>
@@ -42,6 +42,7 @@
 
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom" Margin="5">
 			<Button Content="Добавить товар" Name="AddBut" Click="AddBut_Click" IsVisible="False" Margin="5"/>
+			<Button Content="Заказы" Name="OrderBut" Click="OrderBut_Click" Margin="5"/>
 			<Button Content="Назад" Name="Back" Click="Back_Click" Margin="5"/>
 		</StackPanel>
 
