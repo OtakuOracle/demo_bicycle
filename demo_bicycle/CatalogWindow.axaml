@@ -42,7 +42,7 @@
 
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom" Margin="5">
 			<Button Content="Добавить товар" Name="AddBut" Click="AddBut_Click" IsVisible="False" Margin="5"/>
-			<Button Content="Заказы" Name="OrderBut" Click="OrderBut_Click" Margin="5"/>
+			<Button Content="Заказы" Name="OrderBut" Click="OrderBut_Click" IsVisible="False"  Margin="5"/>
 			<Button Content="Назад" Name="Back" Click="Back_Click" Margin="5"/>
 		</StackPanel>
 

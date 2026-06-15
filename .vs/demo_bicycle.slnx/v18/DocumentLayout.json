@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\catalogwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\catalogwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\catalogwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\catalogwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\addeditwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\addeditwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\addeditwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\catalogwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\catalogwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\catalogwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|solutionrelative:demo_bicycle\\catalogwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30588930-9ADE-D234-850F-7ACFCDEB6B44}|demo_bicycle\\demo_bicycle.csproj|c:\\users\\admin\\desktop\\demo_bicycle\\demo_bicycle\\orderwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -37,12 +37,12 @@
       "VerticalTabListWidth": 312,
       "DocumentGroups": [
         {
-          "DockedWidth": 445,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 499,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AddEditWindow.axaml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\AddEditWindow.axaml",
               "RelativeDocumentMoniker": "demo_bicycle\\AddEditWindow.axaml",
@@ -50,38 +50,37 @@
               "RelativeToolTip": "demo_bicycle\\AddEditWindow.axaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-15T09:33:21.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T09:33:21.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "CatalogWindow.axaml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\CatalogWindow.axaml",
               "RelativeDocumentMoniker": "demo_bicycle\\CatalogWindow.axaml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\CatalogWindow.axaml",
               "RelativeToolTip": "demo_bicycle\\CatalogWindow.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-06-14T14:25:49.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CatalogWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\CatalogWindow.axaml.cs",
               "RelativeDocumentMoniker": "demo_bicycle\\CatalogWindow.axaml.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\CatalogWindow.axaml.cs",
               "RelativeToolTip": "demo_bicycle\\CatalogWindow.axaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAM4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwM4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-14T14:25:48.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "demo_bicycle\\MainWindow.axaml.cs",
@@ -89,18 +88,17 @@
               "RelativeToolTip": "demo_bicycle\\MainWindow.axaml.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T14:25:37.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-14T14:25:37.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AddEditWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\AddEditWindow.axaml.cs",
               "RelativeDocumentMoniker": "demo_bicycle\\AddEditWindow.axaml.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\demo_bicycle\\demo_bicycle\\AddEditWindow.axaml.cs",
               "RelativeToolTip": "demo_bicycle\\AddEditWindow.axaml.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAwwNUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwPEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-14T14:21:52.15Z",
               "EditorCaption": ""
@@ -132,7 +130,7 @@
           ]
         },
         {
-          "DockedWidth": 75,
+          "DockedWidth": 21,
           "SelectedChildIndex": -1,
           "Children": [
             {
