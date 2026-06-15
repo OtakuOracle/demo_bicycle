@@ -9,16 +9,17 @@
 		Icon="Icon/icon.png">
 
 	<StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-		<TextBox Name="TovarIdTextBox" Text="{Binding TovarId}" IsReadOnly="True" Margin="5"/>
-		<TextBox Name="TitleBox" Text="{Binding Title}" Watermark="Название" Margin="5"/>
-		<TextBox Name="DescriptionBox" Text="{Binding Description}" Watermark="Описание" Margin="5"/>
-		<TextBox Name="CostBox" Text="{Binding Cost}" Watermark="Цена" Margin="5"/>
-		<TextBox Name="UnitBox" Text="{Binding Unit}" Watermark="Ед. измерения" Margin="5"/>
-		<TextBox Name="QuantityBox" Text="{Binding Quantity}" Watermark="Количество" Margin="5"/>
-		<TextBox Name="DiscountBox" Text="{Binding Discount}" Watermark="Скидка" Margin="5"/>
-		<ComboBox Name="Category" PlaceholderText="Категория" Margin="5"/>
-		<ComboBox Name="Manufacturer" PlaceholderText="Производитель" Margin="5"/>
-		<ComboBox Name="Supplier" PlaceholderText="Поставщик" Margin="5"/>
+		<TextBox Name="TovarIdTextBox" Text="{Binding TovarId}" IsReadOnly="True" Margin="2"/>
+		<TextBox Name="ArticleBox" Text="{Binding Article}" Watermark="Артикул" Margin="2"/>
+		<TextBox Name="TitleBox" Text="{Binding Title}" Watermark="Название" Margin="2"/>
+		<TextBox Name="DescriptionBox" Text="{Binding Description}" Watermark="Описание" Margin="2"/>
+		<TextBox Name="CostBox" Text="{Binding Cost}" Watermark="Цена" Margin="2"/>
+		<TextBox Name="UnitBox" Text="{Binding Unit}" Watermark="Ед. измерения" Margin="2"/>
+		<TextBox Name="QuantityBox" Text="{Binding Quantity}" Watermark="Количество" Margin="2"/>
+		<TextBox Name="DiscountBox" Text="{Binding Discount}" Watermark="Скидка" Margin="2"/>
+		<ComboBox Name="Category" PlaceholderText="Категория" Margin="2"/>
+		<ComboBox Name="Manufacturer" PlaceholderText="Производитель" Margin="2"/>
+		<ComboBox Name="Supplier" PlaceholderText="Поставщик" Margin="2"/>
 		<Image Source="{Binding Photo}" Name="ImageBox" Height="100" Width="100" Margin="5"/>
 		<Button Content="Добавить" Name="AddBut" Click="AddBut_Click" IsVisible="False" Margin="5"/>
 		<Button Content="Изменить" Name="EditBut" Click="EditBut_Click" IsVisible="False" Margin="5"/>

@@ -21,7 +21,9 @@ public partial class AddEditWindow : Window
     public AddEditWindow() //add
     {
         InitializeComponent();
+
         DataContext = new Tovar();
+
         TovarIdTextBox.IsVisible = false;
 
         LoadCat();
@@ -105,62 +107,80 @@ public partial class AddEditWindow : Window
             var newTovar = DataContext as Tovar;
 
 
-            if(string.IsNullOrEmpty(TitleBox.Text))
+
+            if (string.IsNullOrEmpty(ArticleBox.Text))
+            {
+                var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Полеартикул пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
+                await error.ShowAsync();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(TitleBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле название пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if (string.IsNullOrEmpty(DescriptionBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле описание пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if (string.IsNullOrEmpty(CostBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле цена пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (string.IsNullOrEmpty(UnitBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле ед.измерения пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (string.IsNullOrEmpty(QuantityBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле количсетво пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if (string.IsNullOrEmpty(DiscountBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле скидка пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if(Supplier.SelectedItem == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле поставщик пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if(Manufacturer.SelectedItem == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле производитель пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if(Category.SelectedItem == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Поле категория пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if(ImageBox.Source == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Картинка не выбрана", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
 
@@ -168,26 +188,29 @@ public partial class AddEditWindow : Window
             int.TryParse(DiscountBox.Text, out int discount);
             int.TryParse(QuantityBox.Text, out int quantity);
 
-            if(cost > 0)
+            if(cost < 0)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Цена меньше 0", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
-            if(discount > 0)
+            if(discount < 0)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Cкидка меньше 0", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
-            if (quantity > 0)
+            if (quantity < 0)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Количество меньше 0", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
 
-            newTovar!.Photo = "/images" + ImageName;
+            newTovar!.Photo = "images/" + ImageName;
 
             newTovar.Manufacturer = context.Manufacturers.FirstOrDefault(x => x.ManufacturerName == Manufacturer.SelectedItem!.ToString())!;
             newTovar.Supplier = context.Suppliers.FirstOrDefault(x => x.SupplierName == Supplier.SelectedItem!.ToString())!;
@@ -252,56 +275,95 @@ public partial class AddEditWindow : Window
             var updatetovar = DataContext as Tovar;
 
 
-            if(string.IsNullOrEmpty(TitleBox.Text))
+            if (string.IsNullOrEmpty(ArticleBox.Text))
+            {
+                var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Полеартикул пусто", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
+                await error.ShowAsync();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(TitleBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
             if (string.IsNullOrEmpty(DescriptionBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (string.IsNullOrEmpty(CostBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (string.IsNullOrEmpty(UnitBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
+
             }
             if (string.IsNullOrEmpty(QuantityBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (string.IsNullOrEmpty(DiscountBox.Text))
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (Category.SelectedItem == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (Manufacturer.SelectedItem == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
             if (Supplier.SelectedItem == null)
             {
                 var error = MessageBoxManager.GetMessageBoxStandard("", "", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
                 await error.ShowAsync();
+                return;
             }
 
-            updatetovar.Manufacturer = context.Manufacturers.FirstOrDefault(x => x.ManufacturerName == Manufacturer.SelectedItem!.ToString())!;
-            updatetovar.Supplier = context.Suppliers.FirstOrDefault(x => x.SupplierName == Supplier.SelectedItem!.ToString())!;
-            updatetovar.Category = context.Categories.FirstOrDefault(x => x.CategoryName == Category.SelectedItem!.ToString())!;
+
+            decimal.TryParse(CostBox.Text, out decimal cost);
+            int.TryParse(DiscountBox.Text, out int discount);
+            int.TryParse(QuantityBox.Text, out int quantity);
+
+            if (cost < 0)
+            {
+                var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Цена меньше 0", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
+                await error.ShowAsync();
+                return;
+            }
+
+            if (discount < 0)
+            {
+                var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Cкидка меньше 0", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
+                await error.ShowAsync();
+                return;
+            }
+
+            if (quantity < 0)
+            {
+                var error = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Количество меньше 0", MsBox.Avalonia.Enums.ButtonEnum.Ok, MsBox.Avalonia.Enums.Icon.Error);
+                await error.ShowAsync();
+                return;
+            }
 
 
 
@@ -313,6 +375,12 @@ public partial class AddEditWindow : Window
             {
                 updatetovar?.Photo = currentphoto;
             }
+
+
+            updatetovar.Manufacturer = context.Manufacturers.FirstOrDefault(x => x.ManufacturerName == Manufacturer.SelectedItem!.ToString())!;
+            updatetovar.Supplier = context.Suppliers.FirstOrDefault(x => x.SupplierName == Supplier.SelectedItem!.ToString())!;
+            updatetovar.Category = context.Categories.FirstOrDefault(x => x.CategoryName == Category.SelectedItem!.ToString())!;
+
 
 
             context.Tovars.Update(updatetovar!);
